@@ -1,0 +1,33 @@
+# Core Deep Learning & GPU Acceleration
+torch==2.12.1+cu132 --index-url https://download.pytorch.org/whl/cu132
+torchvision==0.27.1+cu132 --index-url https://download.pytorch.org/whl/cu132
+transformers
+bitsandbytes
+accelerate
+huggingface_hub
+optimum
+peft
+
+# Layout and OCR
+surya-ocr
+onnxruntime-gpu
+
+# Image Preprocessing & Computer Vision
+opencv-python-headless
+scikit-image
+deskew
+pillow
+numpy
+scipy
+
+# Text Processing & Medical Lexicon
+sentencepiece
+pymedtermino
+
+# Utilities
+pyyaml
+pandas
+matplotlib
+tqdm
+einops
+colorama

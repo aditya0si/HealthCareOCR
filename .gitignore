@@ -1,0 +1,25 @@
+# Patient Data / PHI (Crucial)
+/Patient_Kastoor/
+/WhatsApp.Unknown.2026-04-27.at.12.10.10/
+__MACOSX/
+
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Python Cache & Build
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Local Reports / Runs
+*_report.json
+*.log
+
+# OS Metadata
+.DS_Store
+Thumbs.db

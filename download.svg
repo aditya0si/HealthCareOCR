@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580.184 1811.2600000000002" width="580.184" height="1811.2600000000002" style="--bg:#1F1F1F;--fg:#CCCCCC;--line:#CCCCCC;--accent:#0078D4;--muted:#CCCCCCCC;--surface:#181818;--border:#CCCCCC;background:var(--bg)">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap');
+  text { font-family: 'Inter', system-ui, sans-serif; }
+  svg {
+    /* Derived from --bg and --fg (overridable via --line, --accent, etc.) */
+    --_text:          var(--fg);
+    --_text-sec:      var(--muted, color-mix(in srgb, var(--fg) 60%, var(--bg)));
+    --_text-muted:    var(--muted, color-mix(in srgb, var(--fg) 40%, var(--bg)));
+    --_text-faint:    color-mix(in srgb, var(--fg) 25%, var(--bg));
+    --_line:          var(--line, color-mix(in srgb, var(--fg) 50%, var(--bg)));
+    --_arrow:         var(--accent, color-mix(in srgb, var(--fg) 85%, var(--bg)));
+    --_node-fill:     var(--surface, color-mix(in srgb, var(--fg) 3%, var(--bg)));
+    --_node-stroke:   var(--border, color-mix(in srgb, var(--fg) 20%, var(--bg)));
+    --_group-fill:    var(--bg);
+    --_group-hdr:     color-mix(in srgb, var(--fg) 5%, var(--bg));
+    --_inner-stroke:  color-mix(in srgb, var(--fg) 12%, var(--bg));
+    --_key-badge:     color-mix(in srgb, var(--fg) 10%, var(--bg));
+  }
+</style>
+<defs>
+  <marker id="arrowhead" markerWidth="8" markerHeight="5" refX="7" refY="2.5" orient="auto">
+    <polygon points="0 0, 8 2.5, 0 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+  <marker id="arrowhead-start" markerWidth="8" markerHeight="5" refX="1" refY="2.5" orient="auto-start-reverse">
+    <polygon points="8 0, 0 2.5, 8 5" fill="var(--_arrow)" stroke="var(--_arrow)" stroke-width="0.75" stroke-linejoin="round" />
+  </marker>
+</defs>
+<polyline class="edge" data-from="Start" data-to="PaperDetect" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,76.9 321.9549999999999,124.9" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="PaperDetect" data-to="QualityScore" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,161.8 321.9549999999999,209.8" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="QualityScore" data-to="DecisionSR" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,246.70000000000002 321.955,294.70000000000005" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="DecisionSR" data-to="SuperRes" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Yes" points="296.3903333333333,422.52333333333337 296.3903333333333,460.088 189.909,460.088 189.909,540.388" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="DecisionSR" data-to="SkipSR" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="No" points="347.51966666666664,422.5233333333334 347.51966666666664,460.088 454.001,460.088 454.001,540.388" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SuperRes" data-to="Align" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="189.909,577.288 189.909,601.288 321.9549999999999,601.288 321.9549999999999,625.288" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SkipSR" data-to="Align" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="454.001,577.288 454.001,601.288 321.9549999999999,601.288 321.9549999999999,625.288" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Align" data-to="Layout" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,662.188 321.9549999999999,710.188" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Layout" data-to="Router" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,747.088 321.9549999999999,795.088" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Router" data-to="Surya" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Printed Text" points="293.8448333333333,831.9879999999999 293.8448333333333,867.9879999999999 216.58499999999998,867.9879999999999 216.58499999999998,948.2879999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Router" data-to="TrOCR" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Handwritten Text" points="350.06516666666664,831.9879999999999 350.06516666666664,867.9879999999999 427.32499999999993,867.9879999999999 427.325,948.2879999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Surya" data-to="Merge" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="216.58499999999998,985.1879999999999 216.58499999999998,1009.1879999999999 321.9549999999999,1009.1879999999999 321.9549999999999,1033.1879999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="TrOCR" data-to="Merge" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="427.325,985.1879999999999 427.325,1009.1879999999999 321.9549999999999,1009.1879999999999 321.9549999999999,1033.1879999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Merge" data-to="Dictionary" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,1070.0879999999997 321.9549999999999,1118.0879999999997" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dictionary" data-to="LoadLLM" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="Yes" points="281.0763333333333,1322.4813333333332 281.0763333333333,1399.3599999999997 208.98975000000002,1399.3599999999997 208.98975000000002,1479.6599999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LoadLLM" data-to="LLMCorrect" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="208.98975000000002,1516.56 208.98975000000002,1564.56" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LLMCorrect" data-to="Summarize" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="208.98975000000002,1601.46 208.98975000000002,1625.46 321.9549999999999,1625.46 321.9549999999999,1649.46" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Dictionary" data-to="SkipCorrect" data-style="solid" data-arrow-start="false" data-arrow-end="true" data-label="No" points="362.83366666666666,1322.481333333333 362.83366666666666,1399.3599999999997 434.92024999999995,1399.3599999999997 434.92024999999995,1479.6599999999999" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="SkipCorrect" data-to="LoadLLM2" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="434.92024999999995,1516.56 434.92024999999995,1564.56" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="LoadLLM2" data-to="Summarize" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="434.92024999999995,1601.46 434.92024999999995,1625.46 321.9549999999999,1625.46 321.9549999999999,1649.46" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<polyline class="edge" data-from="Summarize" data-to="Output" data-style="solid" data-arrow-start="false" data-arrow-end="true" points="321.9549999999999,1686.3600000000001 321.9549999999999,1734.3600000000001" fill="none" stroke="var(--_line)" stroke-width="1" marker-end="url(#arrowhead)" />
+<g class="edge-label" data-from="DecisionSR" data-to="SuperRes" data-label="Yes">
+  <rect x="171.409" y="467.088" width="36.658" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="189.738" y="482.238" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Yes</text>
+</g>
+<g class="edge-label" data-from="DecisionSR" data-to="SkipSR" data-label="No">
+  <rect x="438.501" y="467.088" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="453.85999999999996" y="482.238" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">No</text>
+</g>
+<g class="edge-label" data-from="Router" data-to="Surya" data-label="Printed Text">
+  <rect x="178.58499999999998" y="874.9879999999999" width="75.26800000000001" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="216.219" y="890.1379999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Printed Text</text>
+</g>
+<g class="edge-label" data-from="Router" data-to="TrOCR" data-label="Handwritten Text">
+  <rect x="378.82499999999993" y="874.9879999999999" width="96.65200000000003" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="427.15099999999995" y="890.1379999999999" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Handwritten Text</text>
+</g>
+<g class="edge-label" data-from="Dictionary" data-to="LoadLLM" data-label="Yes">
+  <rect x="190.48975000000002" y="1406.3599999999997" width="36.658" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="208.81875000000002" y="1421.5099999999998" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">Yes</text>
+</g>
+<g class="edge-label" data-from="Dictionary" data-to="SkipCorrect" data-label="No">
+  <rect x="419.42024999999995" y="1406.3599999999997" width="30.718000000000004" height="30.3" rx="2" ry="2" fill="var(--bg)" stroke="var(--_inner-stroke)" stroke-width="1" />
+  <text x="434.77924999999993" y="1421.5099999999998" text-anchor="middle" font-size="11" font-weight="400" fill="var(--_text-sec)" dy="3.8499999999999996">No</text>
+</g>
+<g class="node" data-id="Start" data-label="Upload Image" data-shape="stadium">
+  <rect x="262.0775" y="40" width="119.755" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="var(--_node-fill)" stroke="var(--_node-stroke)" stroke-width="0.75" />
+  <text x="321.955" y="58.45" text-anchor="middle" font-size="13" font-weight="500" fill="var(--_text)" dy="4.55">Upload Image</text>
+</g>
+<g class="node" data-id="PaperDetect" data-label="1. Paper Detection &amp; Crop - CPU/OpenCV" data-shape="rectangle">
+  <rect x="185.384" y="124.9" width="273.14199999999994" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="321.9549999999999" y="143.35000000000002" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">1. Paper Detection &amp; Crop - CPU/OpenCV</text>
+</g>
+<g class="node" data-id="QualityScore" data-label="2. Quality Assessment - CPU/OpenCV" data-shape="rectangle">
+  <rect x="193.535" y="209.8" width="256.8399999999999" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="321.9549999999999" y="228.25" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">2. Quality Assessment - CPU/OpenCV</text>
+</g>
+<g class="node" data-id="DecisionSR" data-label="3. Is DPI &lt; 400?" data-shape="diamond">
+  <polygon points="321.955,294.70000000000005 398.649,371.39400000000006 321.955,448.0880000000001 245.26099999999997,371.39400000000006" fill="#fef3c7" stroke="#d97706" stroke-width="1px" />
+  <text x="321.955" y="371.39400000000006" text-anchor="middle" font-size="13" font-weight="500" fill="#78350f" dy="4.55">3. Is DPI &lt; 400?</text>
+</g>
+<g class="node" data-id="SuperRes" data-label="4. Real-ESRGAN x2 - GPU Vulkan/TensorRT" data-shape="rectangle">
+  <rect x="40" y="540.388" width="299.818" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="189.909" y="558.8380000000001" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">4. Real-ESRGAN x2 - GPU Vulkan/TensorRT</text>
+</g>
+<g class="node" data-id="SkipSR" data-label="Skip Super Resolution" data-shape="rectangle">
+  <rect x="367.818" y="540.388" width="172.36599999999999" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="454.001" y="558.8380000000001" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">Skip Super Resolution</text>
+</g>
+<g class="node" data-id="Align" data-label="5. Deskew &amp; Enhance - CPU/OpenCV" data-shape="rectangle">
+  <rect x="194.64649999999997" y="625.288" width="254.61699999999996" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="321.9549999999999" y="643.738" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">5. Deskew &amp; Enhance - CPU/OpenCV</text>
+</g>
+<g class="node" data-id="Layout" data-label="6. Layout Analysis - LayoutLMv3 INT8" data-shape="rectangle">
+  <rect x="189.45949999999996" y="710.188" width="264.991" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="321.9549999999999" y="728.638" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">6. Layout Analysis - LayoutLMv3 INT8</text>
+</g>
+<g class="node" data-id="Router" data-label="7. Route Text Regions" data-shape="rectangle">
+  <rect x="237.62449999999995" y="795.088" width="168.661" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="321.9549999999999" y="813.538" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">7. Route Text Regions</text>
+</g>
+<g class="node" data-id="Surya" data-label="8a. Surya2 OCR NF4" data-shape="rectangle">
+  <rect x="135.2185" y="948.2879999999999" width="162.73299999999998" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="216.58499999999998" y="966.7379999999999" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">8a. Surya2 OCR NF4</text>
+</g>
+<g class="node" data-id="TrOCR" data-label="8b. TrOCR Handwritten NF4" data-shape="rectangle">
+  <rect x="325.9515" y="948.2879999999999" width="202.74699999999996" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="427.325" y="966.7379999999999" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">8b. TrOCR Handwritten NF4</text>
+</g>
+<g class="node" data-id="Merge" data-label="9. Merge Text in Reading Order" data-shape="rectangle">
+  <rect x="209.83699999999996" y="1033.1879999999999" width="224.236" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="321.9549999999999" y="1051.638" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">9. Merge Text in Reading Order</text>
+</g>
+<g class="node" data-id="Dictionary" data-label="10. Any Word Confidence &lt; 0.6?" data-shape="diamond">
+  <polygon points="321.9549999999999,1118.0879999999997 444.5909999999999,1240.7239999999997 321.9549999999999,1363.3599999999997 199.31899999999993,1240.7239999999997" fill="#fef3c7" stroke="#d97706" stroke-width="1px" />
+  <text x="321.9549999999999" y="1240.7239999999997" text-anchor="middle" font-size="13" font-weight="500" fill="#78350f" dy="4.55">10. Any Word Confidence &lt; 0.6?</text>
+</g>
+<g class="node" data-id="LoadLLM" data-label="11. Unload OCR &amp; Load Phi-4 AWQ" data-shape="rectangle">
+  <rect x="93.90775000000004" y="1479.6599999999999" width="230.16399999999993" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="208.98975000000002" y="1498.11" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">11. Unload OCR &amp; Load Phi-4 AWQ</text>
+</g>
+<g class="node" data-id="LLMCorrect" data-label="12. LLM Contextual Post-Correction" data-shape="rectangle">
+  <rect x="85.38625000000002" y="1564.56" width="247.20699999999997" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="208.98975000000002" y="1583.01" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">12. LLM Contextual Post-Correction</text>
+</g>
+<g class="node" data-id="Summarize" data-label="13. Structured Clinical Summary Generation" data-shape="rectangle">
+  <rect x="176.492" y="1649.46" width="290.92599999999993" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="321.9549999999999" y="1667.91" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">13. Structured Clinical Summary Generation</text>
+</g>
+<g class="node" data-id="SkipCorrect" data-label="Skip LLM Correction" data-shape="rectangle">
+  <rect x="352.07174999999995" y="1479.6599999999999" width="165.697" height="36.900000000000006" rx="0" ry="0" fill="#f8fafc" stroke="#94a3b8" stroke-width="1px" />
+  <text x="434.92024999999995" y="1498.11" text-anchor="middle" font-size="13" font-weight="500" fill="#334155" dy="4.55">Skip LLM Correction</text>
+</g>
+<g class="node" data-id="LoadLLM2" data-label="Load Phi-4 AWQ" data-shape="rectangle">
+  <rect x="366.52124999999995" y="1564.56" width="136.798" height="36.900000000000006" rx="0" ry="0" fill="#ecfdf5" stroke="#059669" stroke-width="1px" />
+  <text x="434.92024999999995" y="1583.01" text-anchor="middle" font-size="13" font-weight="500" fill="#065f46" dy="4.55">Load Phi-4 AWQ</text>
+</g>
+<g class="node" data-id="Output" data-label="Structured JSON Output" data-shape="stadium">
+  <rect x="230.58499999999998" y="1734.3600000000001" width="182.73999999999995" height="36.900000000000006" rx="18.450000000000003" ry="18.450000000000003" fill="#4f46e5" stroke="#312e81" stroke-width="2px" />
+  <text x="321.9549999999999" y="1752.8100000000002" text-anchor="middle" font-size="13" font-weight="500" fill="#fff" dy="4.55">Structured JSON Output</text>
+</g>
+</svg>

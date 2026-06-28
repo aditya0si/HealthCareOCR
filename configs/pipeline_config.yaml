@@ -1,0 +1,69 @@
+# HealthCareOCR Pipeline Configuration
+
+# Hardware & Inference Optimizations
+hardware:
+  device: "cuda"
+  vram_limit_gb: 8.0
+  enable_cuda_graphs: true
+  enable_compile: true
+  torch_compile_mode: "max-autotune"
+  preallocate_vram_mb: 2048
+
+# Image Quality Assessment Thresholds (0.0 to 1.0)
+quality_assessment:
+  min_sharpness: 0.15      # Laplacian variance threshold (scaled)
+  min_contrast: 0.20       # Normalized histogram spread
+  min_brightness: 0.15     # Minimum mean pixel value (normalized)
+  max_brightness: 0.85     # Maximum mean pixel value (normalized)
+  max_noise_ratio: 0.25    # High frequency noise threshold
+  max_skew_angle: 1.0      # Skew angle in degrees before deskew runs
+  min_dpi: 180             # DPI below which Super Resolution is triggered; target around 180–200 DPI for OCR
+
+# Paper Detection & Geometric Correction
+paper_detection:
+  processing_max_dim: 1024
+  canny_low: 50
+  canny_high: 150
+  gaussian_blur_ksize: 5
+  enable_grabcut_fallback: true
+  enable_hough_fallback: true
+
+# Sauvola Binarization Parameters (for low contrast/shadows)
+binarization:
+  window_size: 25          # Sauvola local window size
+  k_value: 0.2            # Sauvola k parameter
+  r_value: 128            # Dynamic range standard deviation fallback
+
+# Models Selection & Configurations
+models:
+  layout_model:
+    name: "microsoft/layoutlmv3-base"
+    quantization: "int8"
+    use_onnx: true
+  
+  printed_ocr_model:
+    name: "vikp/surya_det"     # Det & Rec models for Surya2
+    rec_name: "vikp/surya_rec"
+    quantization: "nf4"
+    use_flash_attn: true
+  
+  handwriting_ocr_model:
+    name: "microsoft/trocr-small-handwritten"
+    quantization: "nf4"
+  
+  llm:
+    name: "azure99/phi-4-mini-instruct-awq" # Phi-4 Mini AWQ 4-bit
+    max_new_tokens: 512
+    temperature: 0.1
+    top_p: 0.9
+
+# Post-processing & Verification
+post_processing:
+  dictionary_confidence_threshold: 0.85
+  medical_dict_path: "data/medical_terms.txt"
+  min_word_len_for_correction: 3
+
+# Summarization Parameters
+summarization:
+  output_format: "json"
+  include_raw_ocr: true
